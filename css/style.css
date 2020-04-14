@@ -1,0 +1,635 @@
+@charset "UTF-8";
+
+html {
+  margin: 0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-weight: 500;
+  color: #333;
+  background-color: #fefefe;
+  line-height: 2.0;
+  letter-spacing: 0.1em;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+ }
+
+h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul,li,dl,dt,dd {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+a { 
+  text-decoration: none; 
+  transition: all .6s ease;
+}
+
+a:hover { 
+  transition: all .6s ease;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+.header {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+}
+
+.header img {
+  width: 20%;
+  margin: 15px 0 0 25px;
+  font-size: 2.5rem;
+}
+
+.header nav ul {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.header nav ul li {
+  margin: 0 20px;
+}
+
+header nav li a {
+  color: #333;
+}
+
+header nav li a:hover {
+  opacity: 0,6;
+}
+
+.header nav li.phone {
+  margin: 0 30px 0 10px;
+  padding: 0 25px;
+  border: 1px solid #fff;
+  line-height: 50px;
+  display: block;
+  color: #333;
+}
+
+.header .fas {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1281px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .nav-button,
+  .nav-button span {
+  display: inline-block;
+  }
+  
+  .nav-button {
+  position: relative;
+  width: 30px;
+  height: 26px;
+  }
+
+  .nav-button span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+  }
+
+  .nav-button span:nth-of-type(1) {
+    top: 0;
+  }
+
+  .nav-button span:nth-of-type(2) {
+    top: 11px;
+  }
+
+  .nav-button span:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+
+.mainvisual {
+  position: relative;
+}
+
+.mainvisual img {
+  height: 1200px;
+  object-fit: cover;
+  object-position: 0 15%;
+  -webkit-clip-pass: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);	
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);	
+}
+
+.mainvisual h2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 4vw;
+  color: #333;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.mainvisual h2::after {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 30%;
+  background-color: rgba(246, 227, 220, 0.5);
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .mainvisual img {
+    height: auto;
+  }
+}
+
+.topics {
+  padding: 120px;
+}
+
+.topics .content-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.topics .heading {
+  width: 35%;
+}
+
+.topics .heading h2 {
+  color: #f96545; 
+  padding: 5px 5px 5px 30px; 
+  position: relative;
+}
+
+.topics .heading h2::before {
+  background-color: #f96545; 
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 5px; 
+  height: 100%;
+}
+
+.topics .heading h2::after {
+  background-color: #f6e3dc;
+  border-radius: 5px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 5px;
+  height: 100%;
+}
+
+.topics .content {
+  width: 65%;
+}
+
+.topics .content table {
+  width: 100%;
+  margin: 0 0 25px 0;
+}
+
+.topics .content th {
+  padding: 20px 2rem 20px 0;
+  border-bottom: 1px dotted;
+}
+
+.topics .content td {
+  border-bottom: 1px dotted;
+}
+
+.topics .content tr:last-of-type th,
+.topics .content tr:last-of-type td {
+  border-bottom: none;
+}
+
+.topics .content .btn {
+  margin: 0;
+}
+
+.topics .content .btn a {
+  display: block;
+  font-size: 0.8rem;
+  color: #000;
+  border: 1px solid #000;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0 0 0 auto;
+}
+
+.topics .conten .btn a:hover {
+  background-color:  #333;
+  color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+  .topics {
+    padding: 50px 5vw;
+  }
+
+  .topics .content-wrapper {
+    display: block;
+  }
+
+  .topics .heading {
+    width: 100%;
+  }
+
+  .topics .heading h2 {
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+
+  .topics .content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .topics {
+    padding: 50px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .topics .content .btn a {
+    width: 35%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .topics .conten th {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 0 0 0;
+    border-bottom: 0;
+  }
+
+  .topics .content td {
+    display: block;
+    width: 100%;
+  }
+}
+
+.institution {
+  background-image: url(../img/salon-menu.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.institution::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 101, 69,0.3);
+}
+
+.institution .content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.institution h2 {
+  color: #fff;
+  text-align: left;
+}
+
+.institution p {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.institution p.btn {
+  margin: 0;
+}
+
+.institution p.btn a {
+  color: #fff;
+  display: block;
+  font-size: 0.875rem;
+  border: 1px solid #fff;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.institution p.btn a:hover {
+  background: #fff;
+  color: #333;
+}
+
+@media screen and (max-width: 479px) {
+  .institution .content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .institution .h2,p {
+    text-align: center;
+  }
+
+  .institution p.btn a {
+    width: 30%;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.recommend {
+  padding: 10% 0;
+  position: relative;
+}
+
+.recommend::after {
+  content: "";
+  background-color: #f6e3dc;
+  height: 150%;
+  width: 40%;
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  transform-origin: left top;
+  transform: skewX(-30deg);
+  z-index: -1;
+}
+
+.recommend ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content:space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  transform: skewY(2deg);
+}
+
+.recommend ul li {
+  width: 48%;
+  position: relative;
+}
+
+.recommend ul li figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 43%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+  transition: all .6s ease;
+}
+
+.recommend ul li a:hover figure::after {
+  background: rgba(249, 101, 69, 0.1);
+  transition: all .6s ease;
+}
+
+.recommend li span {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) skewY(-2deg);
+  z-index: 2;
+  color: #333;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .recommend ul {
+    transform: none;
+  }
+
+  .recommend li span {
+    transform: translate(-50%,-50%);
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .recommend ul li {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+}
+
+.contact {
+  width: 100%;
+  height: 500px;
+  background: url(../img/contact.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.contact::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 101, 69,0.2);
+}
+
+.contact ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.contact li {
+  width: 300px;
+  margin: 0 50px;
+}
+
+.contact li a {
+  border: 1px solid #fff;
+  font-size: 1.25rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.contact li a:hover {
+  background: #fff;
+  color: #333;
+}
+
+.footer section {
+  padding-top: 120px;
+}
+
+.footer .high {
+  border-bottom: 1px solid #333;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack:justify;
+  -webkit-justify-content: space-between;
+  justify-content:space-between;
+  align-items: flex-end;
+}
+
+.footer .high img {
+   width: 30%;
+}
+
+.footer .high ul {
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.footer .high li a {
+ color: #333;
+ padding: 0 25px;
+}
+
+.footer .high li a:hover {
+ opacity: 0.6;
+}
+
+.footer .low {
+ padding: 25px 0 80px 0;
+ color: #333;
+}
+
+.footer .low span {
+ padding-left: 1em;
+}
+
+.footer section p {
+ color: #333;
+ text-align: center;
+ font-size: 0.75rem;
+}
+
+
+@media screen and (max-width: 1199px) {
+ .footer .high {
+   display: block;
+ }
+}
+
+@media screen and (max-width: 767px) {
+ .footer section {
+   padding-top: 50px;
+ }
+
+ .footer .high li {
+   width: calc(100%/3);
+   margin: 0 0 10px;
+ }
+
+ .footer .high li a {
+   display: block;
+   text-align: center;
+   padding: 0;
+ }
+}
+
+@media screen and (max-width: 479px) {
+ .footer .high h1,.low {
+   text-align: center;
+ }
+}
